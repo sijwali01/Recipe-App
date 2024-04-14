@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+  background-color: #2b1d0f;
+  color: white;
+}
+header nav {
+  background-color: #212121;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+header nav h1 {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+header nav form {
+  display: flex;
+  justify-content: center;
+}
+form input[type="text"] {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+form input[type="text"],
+button[type="submit"] {
+  border: none;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 5px;
+}
+form button[type="submit"] {
+  background-color: #532828;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+form button[type="submit"]:hover {
+  background-color: #eb6a6a;
+}
+/* main comtainer */
+
+.recipe-container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 40px;
+  margin: 10px 0px 10px 20px;
+  place-items: center;
+}
+.recipe {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 2px 4px 10px rgb(196, 148, 148), -2px -4px 10px rgb(196, 148, 148);
+  cursor: pointer;
+  max-width: 340px;
+  padding: 20px;
+}
+.recipe > h2,
+p {
+  text-align: center;
+  font-weight: 800;
+  padding: 2px;
+}
+.recipe > a {
+  display: contents;
+  text-align: center;
+  justify-content: space-between;
+}
+.recipe > a > button {
+  background-color: burlywood;
+  font-weight: 700;
+}
+.recipe > a > button:hover{
+    background-color: cadetblue;
+    cursor: pointer;
+}
+body > main > section > h2 {
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  header nav {
+    flex-direction: column;
+  }
+  header nav form {
+    width: 80%;
+  }
+}
